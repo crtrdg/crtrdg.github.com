@@ -1,9 +1,6 @@
-#source: src
-server: true
-auto: true
+baseurl: ""
 title: " -> c r t r d g "
-google_analytics_id: UA-xxx-x
-baseurl: "/crtrdg"
+google_analytics_id: UA-42530305-1
 exclude:
 - .gitignore
 - README.md

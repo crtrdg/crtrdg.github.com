@@ -1,0 +1,8 @@
+{
+  "name": "crtrdg.github.com",
+  "version": "0.0.0",
+  "dependencies": {
+    "normalize-css": "~2.1.2",
+    "html5shiv": "~3.6.2"
+  }
+}

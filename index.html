@@ -2,99 +2,37 @@
 layout: default
 ---
 
-<h2 class="page-banner">make games with javascript!</h2>
 
-<div class="stories">
+<div class="front">
 
-  <div class="story">
-    <h2>This is a headline fuck yeah.</h3>
-    <h4>Subheadline for the fucking win in your face just deal with it everybody.</h4>
-    <div class="story-info">
-      <div class="author">Shawn Kemp</div>
-      <div class="date">2013.13.13 - 13 a.m.</div>
-    </div>
-    <div class="story-tags">
-      <ul>
-        <li>#pizza</li>
-        <li>#poop</li>
-        <li>#basketball</li>
-      </ul>
-    </div>
-    <div class="story-interactions">
-      <ul>
-        <li>share</li>
-        <li>discuss</li>
-      </ul>
-    </div>
+  <div class="section">
+    <h2>Make 2d games the node.js way.</h3>
+    <h4>crtrdg uses browserify to make awesome 2d games.</h4>
+    <br>
+    <br>
+    <br>
+    <h3>Existing crtrdg modules:</h3>
+    <p>crtrdg takes a very modular approach to javascript games, and does so with the help of tools like browserify.</p>
+    <p><b>Check out our existing crtrdg modules:</b></p>
+    <ul>
+      <li><a href="https://github.com/sethvincent/crtrdg-gameloop">crtrdg-gameloop</a> - the main gameloop / ticker module.</li>
+      <li><a href="https://github.com/sethvincent/crtrdg-entity">crtrdg-entity</a> - for entities in the game.</li>
+      <li><a href="https://github.com/sethvincent/crtrdg-keyboard">crtrdg-keyboard</a> - for keyboard interaction.</li>
+      <li><a href="https://github.com/sethvincent/crtrdg-mouse">crtrdg-mouse</a> - for mouse interaction.</li>
+    </ul>
+    <p><b>Generate a crtrdg game with yeoman:</b></p>
+    <p>Use <a href="https://github.com/sethvincent/generator-crtrdg">generator-crtrdg</a> to start your crtrdg game! Learn more about yeoman at <a href="http://yeoman.io/">yeoman.io</a>.
+    <br>
+    <br>
+    <br>
+    <h3>Purpose of crtrdg:</h3>
+    <p>Almost every javascript game / animation library I've found bundles things like requestAnimationFrame polyfill, gameloop, entities, abstract drawing methods, keyboard/mouse input, vector math, and more into one entangled library. If I don't like how the library handles just one of those components, I'm stuck with dead library weight, and sometimes it's difficult to replace a library's methods.</p>
+
+    <p>So what if each element of 2d games were broken up into it's own modules / repositories?</p>
+
+    <p>With inspiration from voxel.js, crtrdg is a collection of javascript modules used for developing 2d games.</p>
+
+    <p>As I learned more about node.js, the core events module, and browserify, I realized the ideal api for making simple 2d games could be based on node's events module. So you'll see a lot of crtrdg modules exposing an api that includes .on('some event', function(){}), which seems to make a lot of sense for games.</p>
   </div>
-
-
-  <div class="story">
-    <h2>This is a headline fuck yeah.</h3>
-    <h4>Subheadline for the fucking win in your face just deal with it everybody.</h4>
-    <div class="story-info">
-      <div class="author">Shawn Kemp</div>
-      <div class="date">2013.13.13 - 13 a.m.</div>
-    </div>
-    <div class="story-tags">
-      <ul>
-        <li>#pizza</li>
-        <li>#poop</li>
-        <li>#basketball</li>
-      </ul>
-    </div>
-    <div class="story-interactions">
-      <ul>
-        <li>share</li>
-        <li>discuss</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="story">
-    <h2>This is a headline fuck yeah.</h3>
-    <h4>Subheadline for the fucking win in your face just deal with it everybody.</h4>
-    <div class="story-info">
-      <div class="author">Shawn Kemp</div>
-      <div class="date">2013.13.13 - 13 a.m.</div>
-    </div>
-    <div class="story-tags">
-      <ul>
-        <li>#pizza</li>
-        <li>#poop</li>
-        <li>#basketball</li>
-      </ul>
-    </div>
-    <div class="story-interactions">
-      <ul>
-        <li>share</li>
-        <li>discuss</li>
-      </ul>
-    </div>
-  </div>
-
-
-  <div class="story">
-    <h2>This is a headline fuck yeah.</h3>
-    <h4>Subheadline for the fucking win in your face just deal with it everybody.</h4>
-    <div class="story-info">
-      <div class="author">Shawn Kemp</div>
-      <div class="date">2013.13.13 - 13 a.m.</div>
-    </div>
-    <div class="story-tags">
-      <ul>
-        <li>#pizza</li>
-        <li>#poop</li>
-        <li>#basketball</li>
-      </ul>
-    </div>
-    <div class="story-interactions">
-      <ul>
-        <li>share</li>
-        <li>discuss</li>
-      </ul>
-    </div>
-  </div>
-
 
 </div>
