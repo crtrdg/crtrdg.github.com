@@ -38,6 +38,11 @@ a:hover, a:focus {
   color: #7E2054;
 }
 
+hr {
+  border: 0px;
+  margin-bottom: 60px;
+}
+
 header {
   background-color: #fff;
   height: 40px;
