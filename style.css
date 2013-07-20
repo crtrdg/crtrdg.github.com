@@ -192,6 +192,40 @@ h3 {
   padding: 0px 5px;
 }
 
+input.email {
+  border: 1px solid #ccc;
+  display: inline-block;
+  outline: none;
+  width: 150px;
+  padding: 5px;
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+
+input.button {
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 5px 12px;
+  color: #464641;
+  border: 1px solid #cdcdca;
+  background-color: #efefec;
+  font-weight: 500;
+  height: 37px;
+  line-height: 2.4;
+}
+
+input.button:hover {
+  color: #343431;
+  border: 1px solid #cdcdca;
+  background-color: #f3f3f3;
+}
+
+input.button:active {
+  color: #000;
+  border: 1px solid #cdcdca;
+  background-color: #fff;
+}
+
 footer {
 }
 
