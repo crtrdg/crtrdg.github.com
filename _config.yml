@@ -1,5 +1,6 @@
 baseurl: ""
-title: " -> c r t r d g "
+title: " -> c r t r d g  -> make 2d javascript games with crtrdg.js!!!"
+description: "crtrdg.js is a set of javascript modules for making 2d games using the same module system as node.js"
 google_analytics_id: UA-42530305-1
 exclude:
 - .gitignore
