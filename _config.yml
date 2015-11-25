@@ -1,7 +1,49 @@
-baseurl: ""
 title: " -> c r t r d g  -> make 2d javascript games with crtrdg.js!!!"
 description: "crtrdg.js is a set of javascript modules for making 2d games the node.js way."
+permalink: /posts/:title
+baseurl: ''
+markdown: redcarpet
 google_analytics_id: UA-42530305-1
-exclude:
-- .gitignore
-- README.md
+exclude: [.gitignore, README.md, node_modules]
+
+collections:
+  contributors:
+    output: true
+    permalink: /:path/
+  packages:
+    output: true
+    permalink: /packages/:path/
+  topics:
+    output: true
+    permalink: /:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "contributors"
+    values:
+      layout: "contributor"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "topic"
+  -
+    scope:
+      path: ""
+      type: "packages"
+    values:
+      layout: "package"

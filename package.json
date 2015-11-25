@@ -1,0 +1,35 @@
+{
+  "name": "crtrdg.github.com",
+  "version": "1.0.0",
+  "description": "> the site for crtrdg.",
+  "main": "index.js",
+  "scripts": {
+    "packages-sync": "cat repos.txt | ecosystem-docs sync",
+    "packages-read": "cat repos.txt | ecosystem-docs read | ./bin/repos.js",
+    "packages": "npm run packages-sync && npm run packages-read",
+    "bundle": "sheetify -u sheetify-cssnext css/deps.css > css/bundle.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crtrdg/crtrdg.github.com.git"
+  },
+  "author": "sethvincent <sethvincent@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crtrdg/crtrdg.github.com/issues"
+  },
+  "homepage": "https://github.com/crtrdg/crtrdg.github.com#readme",
+  "devDependencies": {
+    "ecosystem-docs": "^1.1.0",
+    "gray-matter": "^2.0.2",
+    "ndjson": "^1.4.3",
+    "sheetify": "^3.1.0",
+    "sheetify-cssnext": "^1.0.0",
+    "through2": "^2.0.0"
+  },
+  "dependencies": {
+    "basscss-grid": "^1.0.3",
+    "csskit": "^1.1.1",
+    "normalize.css": "^3.0.3"
+  }
+}

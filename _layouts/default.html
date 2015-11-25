@@ -1,57 +1,42 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <meta name="description" content="{{ site.description }}">
-
-    <title>{{ site.title }}</title>
-    
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Open+Sans+Condensed:300,700|Open+Sans:300' rel='stylesheet' type='text/css'>
-    
-    <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
-
-    <script src="{{ site.baseurl }}/bower_components/html5shiv/dist/html5shiv.js"></script>
-  </head>
-  <body>
-    <div class="logo-container">
-      <div class="logo">
-        <img src="{{ site.baseurl }}/img/crtrdg.png">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if page.title || post.title %}{{ page.title || post.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.description }}{% endif %}</title>
+  <meta name="description" content="{% if page.description || post.description %}{{ page.description || post.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Open+Sans:300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bundle.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
+</head>
+<body>
+  <div class="logo-container">
+    <div class="logo">
+      <img src="{{ site.baseurl }}/img/crtrdg.png">
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <nav id="main">
+        {% include menu.html %}
+      </nav>
+    </div>
+  </header>
+  <div id="main">
+    <div class="container">
+      <div class="content-wrapper">
+        {{ content }}
       </div>
     </div>
-    <header>
-      <div class="container">
-        <nav id="main">
-          <!-- {% include menu.html %} -->
-          <ul>games are fun and so javascript is fun.</ul>
-        </nav>
-      </div>
-    </header>
-    <div id="main">
-      <div class="container">
-        <!--[if lt IE9]>
-          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <div class="content-wrapper">
-          {{ content }}
-        </div>
-      </div>
+  </div>
+  <footer>
+    <div class="container">
+      <nav>
+        {% include menu.html %}
+      </nav>
     </div>
-    <footer>
-      <div class="container">
-        <a href="http://superbigtree.com" target="_blank"><img src="{{ site.baseurl }}/img/sbt.png" class="sbt"/></a>
-        <nav>
-          <!-- {% include menu.html %} -->
-        </nav>
-      </div>
-    </footer>
+  </footer>
 
-    {% include analytics.html %}
-  </body>
+  {% include analytics.html %}
+</body>
 </html>

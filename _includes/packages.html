@@ -1,0 +1,7 @@
+<div class="item-list packages">
+  {% for package in site.packages %}
+  <div class="item package" id="{{ package.name }}">
+    <h2 class="item-title package-name"><a href="{{site.baseurl}}/packages/{{ package.name }}">{{ package.name }}</a></h2>
+  </div>
+  {% endfor %}
+</div>
