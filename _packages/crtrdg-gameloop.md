@@ -2,238 +2,15 @@
 user: sethvincent
 path: sethvincent/crtrdg-gameloop
 name: crtrdg-gameloop
-head: bc53233086fd7d352de0c5544c101926f0cbe528
-readme: >
-  # crtrdg gameloop
-
-  > canvas animation using requestAnimationFrame
-
-
-
-  [![browser support](https://ci.testling.com/sethvincent/crtrdg-gameloop.png)
-
-  ](https://ci.testling.com/sethvincent/crtrdg-gameloop)
-
-
-
-  ## Goals for the crtrdg gameloop:
-
-  - Initialize 2d canvas and animate using requestAnimationFrame.
-
-  - Create a gameloop that emits update and draw events.
-
-  - Emit pause and resume events.
-
-
-
-  ## Requirements
-
-  - node.js
-
-  - browserify / beefy
-
-
-
-  ## Getting started
-
-  Try it out on requirebin:
-  [http://requirebin.com/?gist=5952933](http://requirebin.com/?gist=5952933)
-
-
-
-  ### Install node if you haven't already.
-
-
-
-  ### Install browserify and beefy:
-
-  ```
-
-  npm install -g browserify beefy
-
-  ```
-
-
-
-  ### Create an index.html file:
-
-  ```
-
-  <!DOCTYPE html>
-
-  <html>
-
-  <head>
-
-    <title>crtrdg gameloop test</title>
-
-  </head>
-
-  <body>
-
-
-
-  <canvas id="game"></canvas>
-
-
-
-  <script src="./bundle.js"></script>
-
-  </body>
-
-  </html>
-
-  ```
-
-
-
-  ### Create a game.js file:
-
-  ```
-
-  var Game = require('crtrdg-gameloop');
-
-
-
-  // initialize the game with the canvas id of your game
-
-  // the width, height, and default background color of the canvas
-
-  var game = new Game({
-
-    canvas: 'game',
-
-    width: '800',
-
-    height: '400'
-
-  });
-
-
-
-  // every time through the loop, the `update` event will be emitted,
-
-  // interval is the amount of time between each loop
-
-  // listen for the `update` event like this:
-
-  game.on('update', function(interval){
-
-    console.log('update', interval);
-
-  });
-
-
-
-  // every time through the loop, the `draw` event will be emitted.
-
-  // context is the canvas context, and you can use it to draw on the canvas like
-  usual.
-
-  // listen for the `draw` event like this:
-
-  game.on('draw', function(context){
-
-    context.fillStyle = '#fff';
-
-    context.fillRect(0, 0, game.width, game.height);
-
-  });
-
-
-
-  // if game.pause() is called somewhere in your code,
-
-  // a `pause` event will be emitted
-
-  // listen for it like this:
-
-  game.on('pause', function(){
-
-    console.log('paused');
-
-  });
-
-
-
-  // if game.resume() is called somewhere in your code,
-
-  // a `resume` event will be emitted
-
-  // listen for it like this:
-
-  game.on('resume', function(){
-
-    console.log('resumed');
-
-  });
-
-  ```
-
-
-
-  ## Purpose of `crtrdg`:
-
-  Almost every javascript game / animation library I've found bundles things like
-  requestAnimationFrame polyfill, gameloop, entities, abstract drawing methods,
-  keyboard/mouse input, vector math, and more into one entangled library. If
-  I don't like how the library handles just one of those
-
-
-
-  With inspiration from voxel.js, crtrdg is a collection of javascript modules
-  used for developing 2d games.
-
-
-
-  As I learned more about node.js, the core events module, and browserify,
-  I realized the ideal api for making simple 2d games could be based on node's
-  events module.
-
-
-
-  ## Other `crtrdg` modules:
-
-  - [crtrdg-entity](http://github.com/sethvincent/crtrdg-entity)
-
-  - [crtrdg-keyboard](http://github.com/sethvincent/crtrdg-keyboard)
-
-  - [crtrdg-mouse](http://github.com/sethvincent/crtrdg-mouse)
-
-
-
-  ## Modules that work well with `crtrdg-gameloop`:
-
-  - [aabb-2d](http://github.com/chrisdickinson/aabb-2d)
-
-  - [gl-matrix](http://github.com/toji/gl-matrix)
-
-
-
-  ## Contributing
-
-  - Fork this repository.
-
-  - Create a branch for you changes.
-
-  - Include tests if applicable.
-
-  - Add/edit documentation for any changes.
-
-  - Submit a pull request.
-
-
-
-  ## License
-
-  MIT
+head: 70bd0e667574f4af08ab49e05eeaa812878baa24
 package:
   name: crtrdg-gameloop
-  version: 0.2.2
+  version: 1.0.0
   description: gameloop module for crtrdg – canvas-based animation.
   main: index.js
   scripts:
-    start: 'beefy example.js:bundle.js --live'
+    build-docs: "documentation-readme -s 'API'"
+    start: budo example.js --live
     test: 'browserify test.js | testling'
   repository:
     type: git
@@ -263,11 +40,15 @@ package:
     url: 'http://sethvincent.com'
   license: MIT
   dependencies:
-    inherits: ~2.0.0
-    raf-stream: ^1.0.0
+    gameloop-canvas: ^1.1.0
+    isarray: 0.0.1
   devDependencies:
+    browserify: ^12.0.1
+    budo: ^7.0.2
     crtrdg-mouse: 0.0.1
+    documentation-readme: ^2.1.1
     tape: ^2.13.1
+readme: "# crtrdg gameloop\n\n> canvas animation using requestAnimationFrame\n\n## Goals for the crtrdg gameloop:\n\n-   Initialize 2d canvas and animate using requestAnimationFrame.\n-   Create a gameloop that emits update and draw events.\n-   Emit pause and resume events.\n\n## Install\n\n    npm install crtrdg-gameloop\n\n## Other `crtrdg` modules:\n\n-   [crtrdg-entity](http://github.com/sethvincent/crtrdg-entity)\n-   [crtrdg-keyboard](http://github.com/sethvincent/crtrdg-keyboard)\n-   [crtrdg-mouse](http://github.com/sethvincent/crtrdg-mouse)\n\n## Contributing\n\n-   Fork this repository.\n-   Create a branch for you changes.\n-   Include tests if applicable.\n-   Add/edit documentation for any changes.\n-   Submit a pull request.\n\n## API\n\n### createGame\n\nCreate the game\n\n**Parameters**\n\n-   `options` **Object** \n    -   `options.canvas` **[Object]** – id or dom node of canvas tag\n    -   `options.fps` **[Number]** \n\n**Examples**\n\n```javascript\nvar createGame = require('crtrdg-gameloop')\n\nvar game = createGame({ canvas: 'game' })\n```\n\n### game.draw\n\nDraw to the canvas\n\n**Parameters**\n\n-   `renderer` **Object** \n-   `context`  \n-   `delta` **Number** – time elapsed since last update\n\n### game.end\n\nEnd the game. Emits the `end` event/\n\n**Examples**\n\n```javascript\ngame.end()\n```\n\n### game.resume\n\nResume the game. Emits the `resume` event.\n\n**Examples**\n\n```javascript\ngame.resume()\n```\n\n### game.toggle\n\nPause or start game depending on game state. Emits either the `pause` or `resume` event.\n\n**Examples**\n\n```javascript\ngame.toggle()\n```\n\n### game.update\n\nUpdate the game state. Emits the `update` event. You'll likely never call this method, but you may need to override it. Make sure to always emit the update event with the `delta` time.\n\n**Parameters**\n\n-   `delta` **Number** – time elapsed since last update\n\n### Game#draw\n\nDraw event.\n\n**Parameters**\n\n-   `renderer` **Object** \n-   `delta` **Number** \n\n**Examples**\n\n```javascript\ngame.on('draw', function (renderer, dt) {\n  console.log(dt)\n})\n```\n\n### Game#end\n\nEnd event. Fired when `game.end()` is called.\n\n**Examples**\n\n```javascript\ngame.on('end', function () {})\n```\n\n### Game#pause\n\nPause event. Fired when `game.pause()` is called.\n\n**Examples**\n\n```javascript\ngame.on('pause', function () {})\n```\n\n### Game#resume\n\nResume event. Fired when `game.resume()` is called.\n\n**Examples**\n\n```javascript\ngame.on('resume', function () {})\n```\n\n### Game#start\n\nStart event. Fired when `game.start()` is called.\n\n**Examples**\n\n```javascript\ngame.on('start', function () {})\n```\n\n### Game#update\n\nUpdate event.\n\n**Parameters**\n\n-   `delta` **Number** \n\n**Examples**\n\n```javascript\ngame.on('update', function (dt) {\n  console.log(dt)\n})\n```\n\n## License\n\nMIT\n"
 contributors:
   - login: sethvincent
     id: 164214
@@ -286,7 +67,7 @@ contributors:
     received_events_url: 'https://api.github.com/users/sethvincent/received_events'
     type: User
     site_admin: false
-    contributions: 36
+    contributions: 38
   - login: finnp
     id: 841788
     avatar_url: 'https://avatars.githubusercontent.com/u/841788?v=3'
