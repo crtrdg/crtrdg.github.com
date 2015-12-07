@@ -1,5 +1,4 @@
 sethvincent/gameloop
-sethvincent/crtrdg
 sethvincent/crtrdg-gameloop
 sethvincent/crtrdg-entity
 sethvincent/crtrdg-mouse
