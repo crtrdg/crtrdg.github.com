@@ -1,6 +1,7 @@
 sethvincent/gameloop
 sethvincent/crtrdg-gameloop
 sethvincent/crtrdg-entity
+freeman-lab/crtrdg-touch
 sethvincent/crtrdg-mouse
 sethvincent/crtrdg-keyboard
 sethvincent/crtrdg-player
