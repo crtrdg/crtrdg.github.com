@@ -9,3 +9,4 @@ sethvincent/crtrdg-scene
 sethvincent/crtrdg-goal
 davidmason/crtrdg-time
 finnp/crtrdg-arrows
+freeman-lab/crtrdg-tty
