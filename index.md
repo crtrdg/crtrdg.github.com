@@ -19,18 +19,6 @@ crtrdg takes a very modular approach to javascript games, and does so with the h
 
 ---
 
-## Check out a basic demo
-
-<iframe src="http://requirebin.com/embed?gist=6031438" style="width:100%;height:250px;margin:0px auto;display:block;border:0px;overflow:hidden;">
-  Your browser does not support iframes. Consider installing a current version of Firefox or Chrome.
-</iframe>
-
-_Click the game to give it focus, use WASD to move around._
-
-The above shows an example of usage of crtrdg-gameloop, crtrdg-entity, and crtrdg-keyboard.
-
----
-
 ## Try out a more complex demo with bullets and an enemy!
 
 Example crtrdg.js game: [DEMO](http://sethvincent.github.io/example-crtrdg-game/), [source on github](https://github.com/sethvincent/example-crtrdg-game).
